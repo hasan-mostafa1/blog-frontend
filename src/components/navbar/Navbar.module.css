@@ -1,0 +1,137 @@
+.navbar {
+    padding: 20px 30px;
+    /* box-shadow: 0px 0px 3px var(--secondary-color); */
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.container {
+    max-width: 1500px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all .5s ease-in-out;
+}
+
+.navbar img {
+    filter: var(--icon-filter);
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+.logo {
+    margin-right: auto;
+    color: var(--text-color);
+    font-size: 25px;
+    font-weight: bold;
+    transition: color .5s ease-in-out;
+}
+
+.logo span {
+    font-style: italic;
+    color: var(--secondary-color);
+    transition: color .5s ease-in-out;
+
+}
+
+.navigationList{
+    list-style-type: none;
+    padding: 0px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 40px;
+}
+
+.navigationList .link img{
+    width: 20px;
+    transition: all .3s ease-in-out;
+}
+
+.navigationList .link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+
+.navigationList .link:hover:not(.active) {
+    color: var(--secondary-color);
+}
+
+.navigationList .link:hover img{
+    filter: var(--icon-filter-secondary-color);
+}
+.link.active {
+    color: var(--secondary-color);
+}
+
+.toggleThemeBtn {
+    width: 35px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleThemeBtn img{
+    transform: rotate(-30deg) scale(1);
+    transition: all .3s ease-in-out;
+}
+
+.toggleThemeBtn:hover img {
+    transform: rotatex(30deg) scale(1.1);
+    filter: var(--icon-filter-secondary-color);
+}
+
+.menuBtn {
+    display: none;
+}
+
+@media (max-width:760px) {
+    .menuBtn {
+        display: block;
+        width: 35px;
+        border: none;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navigationList {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px; 
+        left: 0;
+        list-style-type: none;
+        padding: 0px;
+        background-color: var(--main-color);
+        z-index: 1;
+    }
+
+    .navigationList.active {
+        display: flex;
+        gap: 10px;
+        background-color: var(--main-color);
+    }
+
+    .navigationList.active a {
+        display: flex;
+        justify-content: flex-start;
+    }
+}

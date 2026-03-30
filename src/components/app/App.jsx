@@ -1,12 +1,12 @@
+import Navbar from "../navbar/Navbar";
 import "./App.module.css";
 
-function App() {
+const App = () => {
   return (
     <>
-      <h1>Hello World!</h1>
-      <p>This is another react project..</p>
+      <Navbar />
     </>
   );
-}
+};
 
 export default App;

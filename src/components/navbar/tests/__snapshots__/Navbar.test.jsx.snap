@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Navbar component snapshot > Renders correctly 1`] = `
+<div>
+  <nav
+    class="_navbar_4b0a09"
+  >
+    <div
+      class="_container_4b0a09"
+    >
+      <a
+        class="_logo_4b0a09"
+        data-discover="true"
+        href="/"
+      >
+        <span>
+          tech
+        </span>
+        ItEasy
+      </a>
+      <ul
+        class="_navigationList_4b0a09"
+      >
+        <li>
+          <a
+            class="_link_4b0a09 _active_4b0a09"
+            data-discover="true"
+            href="/"
+          >
+            home
+          </a>
+        </li>
+        <li>
+          <a
+            class="_link_4b0a09"
+            data-discover="true"
+            href="/about"
+          >
+            about
+          </a>
+        </li>
+        <li>
+          <a
+            class="_link_4b0a09"
+            data-discover="true"
+            href="/blog"
+          >
+            blog
+          </a>
+        </li>
+      </ul>
+      <button
+        aria-label="Toggle theme"
+        class="_toggleThemeBtn_4b0a09"
+      >
+        <img
+          alt="activate dark theme"
+          src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M2%2012A10%2010%200%200%200%2015%2021.54A10%2010%200%200%201%2015%202.46A10%2010%200%200%200%202%2012Z'%20/%3e%3c/svg%3e"
+        />
+      </button>
+      <button
+        class="_menuBtn_4b0a09"
+      >
+        <img
+          alt="toggle menu"
+          src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z'%20/%3e%3c/svg%3e"
+        />
+      </button>
+    </div>
+  </nav>
+</div>
+`;
