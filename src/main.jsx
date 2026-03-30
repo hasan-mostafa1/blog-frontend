@@ -4,11 +4,14 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import "./assets/reset.css";
 import "./assets/global.css";
 import routes from "./routes";
+import ThemeProvider from "./providers/ThemeProvider";
 
 const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ThemeProvider>
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );
