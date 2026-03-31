@@ -1,0 +1,80 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component snapshot > Renders correctly 1`] = `
+<div>
+  <header
+    class="_header_5cbdfa"
+  >
+    <div
+      class="_intro_5cbdfa"
+    >
+      <h1>
+        Hello World, from 
+        <span>
+          tech
+        </span>
+        itEasy !
+      </h1>
+      <p>
+        This is a public technical blog where you can learn, discuss and share your knowledge.
+      </p>
+      <p>
+        Feel free to
+         
+        <a
+          class="_link_5cbdfa"
+          data-discover="true"
+          href="/"
+        >
+          browse
+        </a>
+         
+        latest technical posts or go ahead and
+         
+        <button
+          class="signupBtn"
+        >
+          create an account
+        </button>
+         to start sharing your knowlege.
+      </p>
+      <p>
+        Already have an account? 
+        <button
+          class="loginBtn"
+        >
+          login.
+        </button>
+      </p>
+    </div>
+    <div
+      class="_latestBlogs_5cbdfa"
+    >
+      <div
+        class="_title_5cbdfa"
+      >
+        <p>
+          Latest blogs
+        </p>
+         
+        <p>
+          <a
+            class="_link_5cbdfa"
+            data-discover="true"
+            href="/"
+          >
+            view all
+          </a>
+        </p>
+      </div>
+      <div
+        class="_content_5cbdfa"
+      >
+        <p>
+          Loading...
+        </p>
+      </div>
+    </div>
+  </header>
+</div>
+`;

@@ -1,0 +1,86 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.header .intro{
+    display: grid;
+    gap: 10px;
+}
+
+.header .intro h1 {
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.intro h1 span {
+    font-style: italic;
+    color: var(--secondary-color);
+    transition: color .5s ease-in-out;
+}
+
+.intro p:last-child {
+    font-size: 14px;
+}
+
+.intro button {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-color);
+    padding: 0px;
+}
+
+.intro button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.intro .link{
+    border: none;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.intro .link:hover {
+    text-decoration: underline;
+    cursor: pointe
+}
+
+.header .latestBlogs {
+    display: grid;
+    min-width: 75%;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+}
+
+.latestBlogs .title {
+    display: flex;
+    padding: 20px 18px;
+}
+
+.latestBlogs .title > p:first-child {
+    margin-right: auto;
+}
+
+.latestBlogs .link {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.latestBlogs .link:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color .2s ease-in-out;
+}
+
+.latestBlogs .content {
+    display: grid;
+}
+
+.latestBlogs .blog {
+    border-top:2px solid var(--border-color);
+    padding:  20px 18px;
+}
