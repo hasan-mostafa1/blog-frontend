@@ -84,3 +84,49 @@
     border-top:2px solid var(--border-color);
     padding:  20px 18px;
 }
+
+.loading {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.loading img {
+    width: 50px;
+    filter: var(--icon-filter);
+    animation: loading .5s linear  infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.networkError {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+}
+
+.networkError img {
+    width: 50px;
+    filter: var(--icon-filter);
+}
+
+@media (max-width:620px){
+    .header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}

@@ -2,6 +2,8 @@ import styles from "./Home.module.css";
 import useLatestPosts from "../../hooks/useLatestPosts";
 import { format, parseISO } from "date-fns";
 import { Link } from "react-router";
+import loadingIconUrl from "../../assets/icons/loading.svg";
+import errorIconUrl from "../../assets/icons/alert-rhombus.svg";
 
 const Home = () => {
   const [latestPosts, error, loading] = useLatestPosts(3);
@@ -39,9 +41,14 @@ const Home = () => {
         </div>
         <div className={styles.content}>
           {loading ? (
-            <p>Loading...</p>
+            <div className={styles.loading}>
+              <img src={loadingIconUrl} alt="" />
+            </div>
           ) : error ? (
-            <p>Network error</p>
+            <div className={styles.networkError}>
+              <img src={errorIconUrl} alt="" />
+              <p>Network Error</p>
+            </div>
           ) : (
             latestPosts.data.map((post) => {
               const createdAtDate = parseISO(post.createdAt);
