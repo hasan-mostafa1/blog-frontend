@@ -43,9 +43,9 @@ exports[`Navbar component snapshot > Renders correctly 1`] = `
           <a
             class="_link_4b0a09"
             data-discover="true"
-            href="/blog"
+            href="/posts"
           >
-            blog
+            posts
           </a>
         </li>
       </ul>

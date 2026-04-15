@@ -1,0 +1,180 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Posts component snapshot > Renders correctly 1`] = `
+<div>
+  <section
+    class="_section_3c1de4"
+  >
+    <form
+      class="_filters_3c1de4"
+    >
+      <div
+        class="_searchBar_3c1de4"
+      >
+        <img
+          alt="magnify-icon"
+          src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M9.5,3A6.5,6.5%200%200,1%2016,9.5C16,11.11%2015.41,12.59%2014.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41%2011.11,16%209.5,16A6.5,6.5%200%200,1%203,9.5A6.5,6.5%200%200,1%209.5,3M9.5,5C7,5%205,7%205,9.5C5,12%207,14%209.5,14C12,14%2014,12%2014,9.5C14,7%2012,5%209.5,5Z'%20/%3e%3c/svg%3e"
+        />
+        <input
+          id="search"
+          name="q"
+          placeholder="Search for posts..."
+          type="search"
+          value=""
+        />
+      </div>
+      <div
+        class="_sortBy_3c1de4"
+      >
+        <label
+          for="sortBy"
+        >
+          Sort By:
+        </label>
+        <select
+          id="sortBy"
+          name="sort"
+        >
+          <option
+            value="createdAt"
+          >
+            Publish Date
+          </option>
+          <option
+            value="likes"
+          >
+            Likes
+          </option>
+        </select>
+      </div>
+      <div
+        class="_sortOrder_3c1de4"
+      >
+        <button
+          type="button"
+        >
+          <img
+            alt="Sort Descending"
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M19%207H22L18%203L14%207H17V21H19M2%2017H12V19H2M6%205V7H2V5M2%2011H9V13H2V11Z'%20/%3e%3c/svg%3e"
+          />
+        </button>
+      </div>
+    </form>
+    <div
+      class="_posts_3c1de4"
+    >
+      <div
+        class="_post_3c1de4"
+      >
+        <div
+          class="_title_3c1de4"
+        >
+          <p>
+            First post
+          </p>
+          <p>
+            by
+             
+            <span>
+              Leo
+               
+              Messi
+            </span>
+             
+            at 
+            Mar 25, 2026
+          </p>
+        </div>
+        <div
+          class="_content_3c1de4"
+        >
+          <p>
+            test test
+          </p>
+        </div>
+      </div>
+      <div
+        class="_post_3c1de4"
+      >
+        <div
+          class="_title_3c1de4"
+        >
+          <p>
+            Second post
+          </p>
+          <p>
+            by
+             
+            <span>
+              Karim
+               
+              Benzema
+            </span>
+             
+            at 
+            Mar 25, 2026
+          </p>
+        </div>
+        <div
+          class="_content_3c1de4"
+        >
+          <p>
+            test test
+          </p>
+        </div>
+      </div>
+      <div
+        class="_post_3c1de4"
+      >
+        <div
+          class="_title_3c1de4"
+        >
+          <p>
+            Third Post
+          </p>
+          <p>
+            by
+             
+            <span>
+              Vini
+               
+              Junior
+            </span>
+             
+            at 
+            Mar 25, 2026
+          </p>
+        </div>
+        <div
+          class="_content_3c1de4"
+        >
+          <p>
+            test test
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="_pagination_3c1de4"
+    >
+      <div
+        class="_btns_3c1de4"
+      >
+        <div />
+        <div />
+      </div>
+      <p>
+        Showing from
+         
+        1
+         to
+         
+        3
+         
+        out of 
+        3
+      </p>
+    </div>
+  </section>
+</div>
+`;

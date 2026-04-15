@@ -19,7 +19,7 @@ const Home = () => {
         </p>
         <p>
           Feel free to{" "}
-          <Link to="#" className={styles.link}>
+          <Link to="posts" className={styles.link}>
             browse
           </Link>{" "}
           latest technical posts or go ahead and{" "}
@@ -34,7 +34,7 @@ const Home = () => {
         <div className={styles.title}>
           <p>Latest blogs</p>{" "}
           <p>
-            <Link to="#" className={styles.link}>
+            <Link to="posts" className={styles.link}>
               view all
             </Link>
           </p>

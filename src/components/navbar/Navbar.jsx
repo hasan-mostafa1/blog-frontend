@@ -62,9 +62,9 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              to="/blog"
+              to="/posts"
               className={
-                location.pathname === "/blog"
+                location.pathname === "/posts"
                   ? `${styles.link} ${styles.active}`
                   : styles.link
               }
@@ -72,7 +72,7 @@ const Navbar = () => {
                 isMenuOpen && toggleMenu();
               }}
             >
-              blog
+              posts
             </Link>
           </li>
         </ul>

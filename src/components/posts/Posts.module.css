@@ -1,0 +1,219 @@
+.section {
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    gap: 40px;
+    padding: 0px 50px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--main-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.filters img {
+    transition: filter .5s ease-in-out, color .5s ease-in-out;
+}
+
+.searchBar {
+    flex-grow: 1;
+    display: flex;
+    position: relative;
+    min-height: 50px;
+}
+
+.searchBar img{
+    width: 25px;
+    position: absolute;
+    top: 25%;
+    left: 15px;
+    filter: var(--icon-filter);
+}
+
+.searchBar input {
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    flex-grow: 1;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 0px 15px 0px 45px;
+    width:100%;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.searchBar input:focus {
+    outline:none;
+}
+
+.filters .sortBy {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.sortBy select {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    border-color: var(--border-color);
+    outline: none;
+    padding: 5px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.filters button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.filters button img {
+    width: 20px;
+    filter: var(--icon-filter);
+}
+
+.filters button img:hover {
+    filter: var(--icon-filter-secondary-color);
+}
+
+.posts {
+    display: grid;
+    gap: 30px;
+}
+
+.post {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    height:300px;
+}
+
+.post .title {
+    background-color: var(--post-title-background);
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    gap: 5px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.post .title p:first-child {
+    font-size: 20px;
+}
+
+.post .title p:last-child {
+    font-size: 13px;
+}
+
+.post .title span {
+    color: var(--secondary-color);
+}
+
+.post .content {
+    background-color: var(--post-body-background);
+    padding: 30px;
+    overflow: hidden;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+} 
+
+.post .content p {
+    height: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.pagination {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.pagination .btns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.pagination .btns div {
+    min-width: 10px
+}
+
+.pagination .btns button {
+    color: var(--text-color);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    width: max-content;
+}
+
+.pagination .btns button:hover {
+    color: var(--secondary-color);
+}
+
+.loading {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.loading img {
+    width: 50px;
+    filter: var(--icon-filter);
+    animation: loading .5s linear  infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.networkError {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+}
+
+.networkError img {
+    width: 50px;
+    filter: var(--icon-filter);
+}
+
+.notFound {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    font-size: 20px;
+}

@@ -24,7 +24,7 @@ exports[`Home component snapshot > Renders correctly 1`] = `
         <a
           class="_link_5cbdfa"
           data-discover="true"
-          href="/"
+          href="/posts"
         >
           browse
         </a>
@@ -61,7 +61,7 @@ exports[`Home component snapshot > Renders correctly 1`] = `
           <a
             class="_link_5cbdfa"
             data-discover="true"
-            href="/"
+            href="/posts"
           >
             view all
           </a>
@@ -70,9 +70,14 @@ exports[`Home component snapshot > Renders correctly 1`] = `
       <div
         class="_content_5cbdfa"
       >
-        <p>
-          Loading...
-        </p>
+        <div
+          class="_loading_5cbdfa"
+        >
+          <img
+            alt=""
+            src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M12,4V2A10,10%200%200,0%202,12H4A8,8%200%200,1%2012,4Z'%20/%3e%3c/svg%3e"
+          />
+        </div>
       </div>
     </div>
   </header>
