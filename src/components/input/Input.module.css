@@ -1,0 +1,26 @@
+.formControl {
+    display: grid;
+    gap: 5px;
+}
+
+.input {
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--input-background-color);
+}
+
+.label {
+    display: grid;
+}
+
+.error {
+    color: #bb1414;
+    border-radius: 10px;
+    margin-left: auto;
+    font-size: 13px;
+}
+
+.requiredAsterisk{
+    color: #bb1414;
+}

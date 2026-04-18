@@ -5,13 +5,16 @@ import "./assets/reset.css";
 import "./assets/global.css";
 import routes from "./routes";
 import ThemeProvider from "./providers/ThemeProvider";
+import AuthProvider from "./providers/AuthProvider";
 
 const router = createBrowserRouter(routes);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <AuthProvider>
+        <RouterProvider router={router} />
+      </AuthProvider>
     </ThemeProvider>
   </StrictMode>,
 );

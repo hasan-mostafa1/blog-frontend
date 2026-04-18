@@ -7,17 +7,22 @@
     --border-color: #3a373b;
     --post-title-background:#d1d1d1;
     --post-body-background:#faf8f4;
+    --dialog-backdrop-color:#06b6d4;
+    --input-background-color: #d1d1d1;
 }
 
 [data-theme='dark'] {
     --main-color:#110e16;
-    --secondary-color:#fbec83;
-    --icon-filter-secondary-color:invert(93%) sepia(6%) saturate(2680%) hue-rotate(339deg) brightness(105%) contrast(98%);
+    --secondary-color:#06b6d4;
+    --icon-filter-secondary-color:invert(63%) sepia(49%) saturate(4385%) hue-rotate(149deg) brightness(96%) contrast(95%);
     --text-color:#ffffff;
     --icon-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(298deg) brightness(102%) contrast(103%);
     --border-color: #161923;
     --post-title-background:#18181b;
     --post-body-background:#0c0c0c;
+    --dialog-backdrop-color:#06b6d4;
+    --input-background-color: #ffffff;
+
 }
 
 body {

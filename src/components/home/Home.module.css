@@ -21,9 +21,9 @@
     transition: color .5s ease-in-out;
 }
 
-.intro p:last-child {
+/* .intro p:last-child {
     font-size: 14px;
-}
+} */
 
 .intro button {
     background-color: transparent;
@@ -129,4 +129,43 @@
         grid-template-columns: 1fr;
         gap: 20px;
     }
+}
+
+.signupDialog {
+    border: none;
+    border-radius: 10px;
+    width: 450px;
+    padding: 30px;
+    align-self: center;
+    justify-self: center;
+    background-color: var(--main-color);
+    color: var(--text-color);
+}
+
+.signupDialog .container {
+    display: grid;
+    gap: 10px;
+}
+
+.signupDialog::backdrop {
+    background-color: var(--dialog-backdrop-color);
+    opacity: 0.2;
+}
+
+.signupDialog .closeBtn {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 20px;
+    justify-self: end;
+    align-self: self-start;
+    cursor: pointer;
+}
+
+.signupDialog .closeBtn:hover {
+    color: var(--secondary-color);
+}
+
+.signupDialog h2 {
+    justify-self: center;
 }
