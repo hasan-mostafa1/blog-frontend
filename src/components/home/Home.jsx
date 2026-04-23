@@ -6,17 +6,23 @@ import loadingIconUrl from "../../assets/icons/loading.svg";
 import errorIconUrl from "../../assets/icons/alert-rhombus.svg";
 import { useContext, useRef } from "react";
 import SignupForm from "../signup-form/SignupForm";
+import LoginForm from "../login-form/LoginForm";
 import { FormProvider, useForm } from "react-hook-form";
 import AuthContext from "../../contexts/AuthContext";
 
 const Home = () => {
   const [latestPosts, error, loading] = useLatestPosts(3);
   const { authUser } = useContext(AuthContext);
-  const methods = useForm();
+  const signupMethods = useForm();
+  const loginMethods = useForm();
   const signupDialog = useRef(null);
+  const loginDialog = useRef(null);
 
   const closeSignupDialog = () => {
     signupDialog.current.close();
+  };
+  const closeLoginDialog = () => {
+    loginDialog.current.close();
   };
 
   return (
@@ -65,7 +71,12 @@ const Home = () => {
               </p>
               <p>
                 Already have an account?{" "}
-                <button className="loginBtn">login.</button>
+                <button
+                  className="loginBtn"
+                  onClick={() => loginDialog.current.showModal()}
+                >
+                  login.
+                </button>
               </p>
             </>
           )}
@@ -105,14 +116,25 @@ const Home = () => {
           </div>
         </div>
       </header>
-      <dialog className={styles.signupDialog} ref={signupDialog}>
+      <dialog className={styles.authDialog} ref={signupDialog}>
         <div className={styles.container}>
           <button className={styles.closeBtn} onClick={closeSignupDialog}>
             X
           </button>
           <h2>Sign Up</h2>
-          <FormProvider {...methods}>
+          <FormProvider {...signupMethods}>
             <SignupForm closeSignupDialog={closeSignupDialog} />
+          </FormProvider>
+        </div>
+      </dialog>
+      <dialog className={styles.authDialog} ref={loginDialog}>
+        <div className={styles.container}>
+          <button className={styles.closeBtn} onClick={closeLoginDialog}>
+            X
+          </button>
+          <h2>Login</h2>
+          <FormProvider {...loginMethods}>
+            <LoginForm closeLoginDialog={closeLoginDialog} />
           </FormProvider>
         </div>
       </dialog>

@@ -131,7 +131,7 @@
     }
 }
 
-.signupDialog {
+.authDialog {
     border: none;
     border-radius: 10px;
     width: 450px;
@@ -142,17 +142,17 @@
     color: var(--text-color);
 }
 
-.signupDialog .container {
+.authDialog .container {
     display: grid;
     gap: 10px;
 }
 
-.signupDialog::backdrop {
+.authDialog::backdrop {
     background-color: var(--dialog-backdrop-color);
     opacity: 0.2;
 }
 
-.signupDialog .closeBtn {
+.authDialog .closeBtn {
     background-color: transparent;
     border: none;
     color: var(--text-color);
@@ -162,10 +162,10 @@
     cursor: pointer;
 }
 
-.signupDialog .closeBtn:hover {
+.authDialog .closeBtn:hover {
     color: var(--secondary-color);
 }
 
-.signupDialog h2 {
+.authDialog h2 {
     justify-self: center;
 }

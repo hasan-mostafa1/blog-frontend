@@ -84,7 +84,7 @@ exports[`Home component snapshot > Renders correctly 1`] = `
     </div>
   </header>
   <dialog
-    class="_signupDialog_5cbdfa"
+    class="_authDialog_5cbdfa"
   >
     <div
       class="_container_5cbdfa"
@@ -238,6 +238,88 @@ exports[`Home component snapshot > Renders correctly 1`] = `
             class="_submitBtn_4cdfeb"
           >
             Sign Up
+          </button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+  <dialog
+    class="_authDialog_5cbdfa"
+  >
+    <div
+      class="_container_5cbdfa"
+    >
+      <button
+        class="_closeBtn_5cbdfa"
+      >
+        X
+      </button>
+      <h2>
+        Login
+      </h2>
+      <form
+        class="_loginForm_53618b"
+        novalidate=""
+      >
+        <div
+          class="_formControl_216ca8"
+        >
+          <label
+            class="_label_216ca8"
+            for="email"
+          >
+            <span>
+              Email
+              <span
+                class="_requiredAsterisk_216ca8"
+              >
+                *
+              </span>
+               
+            </span>
+            <input
+              autocomplete="email"
+              class="_input_216ca8"
+              id="email"
+              name="email"
+              placeholder=""
+              type="email"
+            />
+          </label>
+        </div>
+        <div
+          class="_formControl_216ca8"
+        >
+          <label
+            class="_label_216ca8"
+            for="password"
+          >
+            <span>
+              Password
+              <span
+                class="_requiredAsterisk_216ca8"
+              >
+                *
+              </span>
+               
+            </span>
+            <input
+              autocomplete="current-password"
+              class="_input_216ca8"
+              id="password"
+              name="password"
+              placeholder=""
+              type="password"
+            />
+          </label>
+        </div>
+        <div
+          class="_formControl_53618b"
+        >
+          <button
+            class="_submitBtn_53618b"
+          >
+            Login
           </button>
         </div>
       </form>

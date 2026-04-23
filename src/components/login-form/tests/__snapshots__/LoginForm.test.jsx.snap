@@ -1,0 +1,70 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Login form snapshot > Renders correctly 1`] = `
+<div>
+  <form
+    class="_loginForm_53618b"
+    novalidate=""
+  >
+    <div
+      class="_formControl_216ca8"
+    >
+      <label
+        class="_label_216ca8"
+        for="email"
+      >
+        <span>
+          Email
+          <span
+            class="_requiredAsterisk_216ca8"
+          >
+            *
+          </span>
+           
+        </span>
+        <input
+          autocomplete="email"
+          class="_input_216ca8"
+          id="email"
+          placeholder=""
+          type="email"
+        />
+      </label>
+    </div>
+    <div
+      class="_formControl_216ca8"
+    >
+      <label
+        class="_label_216ca8"
+        for="password"
+      >
+        <span>
+          Password
+          <span
+            class="_requiredAsterisk_216ca8"
+          >
+            *
+          </span>
+           
+        </span>
+        <input
+          autocomplete="current-password"
+          class="_input_216ca8"
+          id="password"
+          placeholder=""
+          type="password"
+        />
+      </label>
+    </div>
+    <div
+      class="_formControl_53618b"
+    >
+      <button
+        class="_submitBtn_53618b"
+      >
+        Login
+      </button>
+    </div>
+  </form>
+</div>
+`;

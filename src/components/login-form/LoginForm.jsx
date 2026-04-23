@@ -1,10 +1,10 @@
-import { useFormContext, useWatch } from "react-hook-form";
-import styles from "./SignupForm.module.css";
+import { useFormContext } from "react-hook-form";
+import styles from "./LoginForm.module.css";
 import Input from "../input/Input";
 import { useContext } from "react";
 import AuthContext from "../../contexts/AuthContext";
 
-const SignupForm = ({ closeSignupDialog }) => {
+const LoginForm = ({ closeLoginDialog }) => {
   const {
     handleSubmit,
     setError,
@@ -12,9 +12,8 @@ const SignupForm = ({ closeSignupDialog }) => {
   } = useFormContext();
   const { updateToken, updateAuthUser } = useContext(AuthContext);
 
-  const passwordValue = useWatch({ name: "password", defaultValue: "" });
   const onSubmit = handleSubmit(async (data) => {
-    const url = new URL(`${import.meta.env.VITE_API_URL}/auth/signup`);
+    const url = new URL(`${import.meta.env.VITE_API_URL}/auth/login`);
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -31,12 +30,16 @@ const SignupForm = ({ closeSignupDialog }) => {
               message: error.msg,
             });
           });
+        } else if (!result.success && result.msg) {
+          setError("root.serverError", {
+            message: result.msg,
+          });
         }
       } else {
         updateAuthUser(result.user);
         const token = result.token.replace(/^Bearer\s+/, "");
         updateToken(token);
-        closeSignupDialog();
+        closeLoginDialog();
       }
     } catch (error) {
       console.error(error.message);
@@ -50,39 +53,13 @@ const SignupForm = ({ closeSignupDialog }) => {
     <form
       noValidate
       onSubmit={(e) => e.preventDefault()}
-      className={styles.signupForm}
+      className={styles.loginForm}
     >
       {errors.root?.serverError && (
         <span className={styles.error} aria-live="polite">
           {errors.root.serverError.message}
         </span>
       )}
-      <Input
-        type="text"
-        id="firstName"
-        name="firstName"
-        label="First Name"
-        autoComplete="given-name"
-        validation={{
-          required: {
-            value: true,
-            message: "This field is required!",
-          },
-        }}
-      />
-      <Input
-        type="text"
-        id="lastName"
-        name="lastName"
-        label="Last Name"
-        autoComplete="family-name"
-        validation={{
-          required: {
-            value: true,
-            message: "This field is required!",
-          },
-        }}
-      />
       <Input
         type="email"
         id="email"
@@ -106,7 +83,7 @@ const SignupForm = ({ closeSignupDialog }) => {
         id="password"
         name="password"
         label="Password"
-        autoComplete="new-password"
+        autoComplete="current-password"
         validation={{
           required: {
             value: true,
@@ -118,24 +95,6 @@ const SignupForm = ({ closeSignupDialog }) => {
           },
         }}
       />
-      <Input
-        type="password"
-        id="passwordConfirmation"
-        name="passwordConfirmation"
-        label="Password Confirmation"
-        autoComplete="new-password"
-        validation={{
-          required: {
-            value: true,
-            message: "This field is required!",
-          },
-          validate: (val) => {
-            if (passwordValue !== val) {
-              return "Your passwords do not match";
-            }
-          },
-        }}
-      />
 
       <div className={styles.formControl}>
         <button
@@ -143,11 +102,11 @@ const SignupForm = ({ closeSignupDialog }) => {
           onClick={onSubmit}
           disabled={isSubmitting}
         >
-          {isSubmitting ? "Signing up..." : "Sign Up"}
+          {isSubmitting ? "Logging in..." : "Login"}
         </button>
       </div>
     </form>
   );
 };
 
-export default SignupForm;
+export default LoginForm;
