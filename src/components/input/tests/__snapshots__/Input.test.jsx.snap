@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Input component snapshot > Renders correctly 1`] = `
+<div>
+  <div
+    class="_formControl_216ca8"
+  >
+    <label
+      class="_label_216ca8"
+      for="test"
+    >
+      <span>
+        test
+         
+      </span>
+      <input
+        class="_input_216ca8"
+        id="test"
+        placeholder=""
+        type="text"
+      />
+    </label>
+  </div>
+</div>
+`;

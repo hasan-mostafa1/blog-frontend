@@ -1,27 +1,32 @@
 import { render } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import { describe, expect, it, vi } from "vitest";
-import Input from "../Input";
+import SignupForm from "../SignupForm";
+import AuthProvider from "../../../providers/AuthProvider";
 
 vi.mock("react-hook-form", () => {
   return {
     useFormContext: () => {
       return {
+        handleSubmit: () => {},
+        setError: () => {},
         register: () => [],
-        formState: { errors: [] },
+        formState: { errors: [], isSubmitting: false },
       };
     },
+    useWatch: () => {},
   };
 });
 
-describe("Input component snapshot", () => {
+describe("Signup form snapshot", () => {
   it("Renders correctly", async () => {
     const { container } = render(
       <MemoryRouter>
-        <Input label="test" type="text" id="test" name="test" />
+        <AuthProvider>
+          <SignupForm />
+        </AuthProvider>
       </MemoryRouter>,
     );
-
     expect(container).toMatchSnapshot();
   });
 });

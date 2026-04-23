@@ -1,0 +1,145 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Signup form snapshot > Renders correctly 1`] = `
+<div>
+  <form
+    class="_signupForm_4cdfeb"
+    novalidate=""
+  >
+    <div
+      class="_formControl_216ca8"
+    >
+      <label
+        class="_label_216ca8"
+        for="firstName"
+      >
+        <span>
+          First Name
+          <span
+            class="_requiredAsterisk_216ca8"
+          >
+            *
+          </span>
+           
+        </span>
+        <input
+          autocomplete="given-name"
+          class="_input_216ca8"
+          id="firstName"
+          placeholder=""
+          type="text"
+        />
+      </label>
+    </div>
+    <div
+      class="_formControl_216ca8"
+    >
+      <label
+        class="_label_216ca8"
+        for="lastName"
+      >
+        <span>
+          Last Name
+          <span
+            class="_requiredAsterisk_216ca8"
+          >
+            *
+          </span>
+           
+        </span>
+        <input
+          autocomplete="family-name"
+          class="_input_216ca8"
+          id="lastName"
+          placeholder=""
+          type="text"
+        />
+      </label>
+    </div>
+    <div
+      class="_formControl_216ca8"
+    >
+      <label
+        class="_label_216ca8"
+        for="email"
+      >
+        <span>
+          Email
+          <span
+            class="_requiredAsterisk_216ca8"
+          >
+            *
+          </span>
+           
+        </span>
+        <input
+          autocomplete="email"
+          class="_input_216ca8"
+          id="email"
+          placeholder=""
+          type="email"
+        />
+      </label>
+    </div>
+    <div
+      class="_formControl_216ca8"
+    >
+      <label
+        class="_label_216ca8"
+        for="password"
+      >
+        <span>
+          Password
+          <span
+            class="_requiredAsterisk_216ca8"
+          >
+            *
+          </span>
+           
+        </span>
+        <input
+          autocomplete="new-password"
+          class="_input_216ca8"
+          id="password"
+          placeholder=""
+          type="password"
+        />
+      </label>
+    </div>
+    <div
+      class="_formControl_216ca8"
+    >
+      <label
+        class="_label_216ca8"
+        for="passwordConfirmation"
+      >
+        <span>
+          Password Confirmation
+          <span
+            class="_requiredAsterisk_216ca8"
+          >
+            *
+          </span>
+           
+        </span>
+        <input
+          autocomplete="new-password"
+          class="_input_216ca8"
+          id="passwordConfirmation"
+          placeholder=""
+          type="password"
+        />
+      </label>
+    </div>
+    <div
+      class="_formControl_4cdfeb"
+    >
+      <button
+        class="_submitBtn_4cdfeb"
+      >
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+`;
