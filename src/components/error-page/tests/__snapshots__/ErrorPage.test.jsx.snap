@@ -1,0 +1,27 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ErrorPage component > Renders correctly 1`] = `
+<div>
+  <div
+    class="_container_d18623"
+  >
+    <section
+      class="_section_d18623"
+    >
+      <img
+        alt="Erorr alert!"
+        src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M12%202C11.5%202%2011%202.19%2010.59%202.59L2.59%2010.59C1.8%2011.37%201.8%2012.63%202.59%2013.41L10.59%2021.41C11.37%2022.2%2012.63%2022.2%2013.41%2021.41L21.41%2013.41C22.2%2012.63%2022.2%2011.37%2021.41%2010.59L13.41%202.59C13%202.19%2012.5%202%2012%202M11%207H13V13H11V7M11%2015H13V17H11V15Z'%20/%3e%3c/svg%3e"
+      />
+      <h1 />
+      <p />
+      <a
+        class="_link_d18623"
+        data-discover="true"
+        href="/"
+      >
+        Back to Homepage
+      </a>
+    </section>
+  </div>
+</div>
+`;
