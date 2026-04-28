@@ -40,7 +40,7 @@ const Home = () => {
                   browse
                 </Link>{" "}
                 latest technical posts or go ahead and visit your{" "}
-                <Link to="#" className={styles.link}>
+                <Link to="profile" className={styles.link}>
                   profile
                 </Link>{" "}
                 to start sharing your knowlege.

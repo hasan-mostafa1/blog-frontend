@@ -5,11 +5,14 @@ import menuIconUrl from "../../assets/icons/menu.svg";
 import styles from "./Navbar.module.css";
 import { useContext, useState } from "react";
 import ThemeContext from "../../contexts/ThemeContext";
+import AuthContext from "../../contexts/AuthContext";
+import defaultAvatarUrl from "../../assets/icons/default-avatar.svg";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { authUser } = useContext(AuthContext);
 
   function toggleMenu() {
     setIsMenuOpen((previousIsOpen) => {
@@ -75,6 +78,24 @@ const Navbar = () => {
               posts
             </Link>
           </li>
+          {authUser && (
+            <li>
+              <Link
+                to="/profile"
+                className={
+                  location.pathname === "/profile"
+                    ? `${styles.link} ${styles.active}`
+                    : styles.link
+                }
+              >
+                <img
+                  className={styles.profileImage}
+                  src={authUser?.profileImage || defaultAvatarUrl}
+                  alt="Profile Image"
+                />
+              </Link>
+            </li>
+          )}
         </ul>
         <button
           className={styles.toggleThemeBtn}

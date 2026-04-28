@@ -49,7 +49,7 @@
 }
 
 .navigationList .link img{
-    width: 20px;
+    width: 25px;
     transition: all .3s ease-in-out;
 }
 
@@ -68,9 +68,10 @@
     color: var(--secondary-color);
 }
 
-.navigationList .link:hover img{
+/* .navigationList .link:hover img{
     filter: var(--icon-filter-secondary-color);
-}
+} */
+
 .link.active {
     color: var(--secondary-color);
 }
@@ -133,4 +134,14 @@
         display: flex;
         justify-content: flex-start;
     }
+
+    .navigationList li:last-child .link:after{
+        content: "Profile";
+        color: var(--text-color);
+        display: inline;
+    }
+}
+
+.profileImage {
+    border-radius: 50px;
 }

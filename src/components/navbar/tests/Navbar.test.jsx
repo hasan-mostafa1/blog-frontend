@@ -4,6 +4,7 @@ import { MemoryRouter } from "react-router";
 import Navbar from "../Navbar";
 import ThemeProvider from "../../../providers/ThemeProvider";
 import userEvent from "@testing-library/user-event";
+import AuthProvider from "../../../providers/AuthProvider";
 
 window.matchMedia = vi.fn(() => {
   return {
@@ -14,11 +15,13 @@ window.matchMedia = vi.fn(() => {
 describe("Navbar component snapshot", () => {
   it("Renders correctly", async () => {
     const { container } = render(
-      <MemoryRouter>
+      <AuthProvider>
         <ThemeProvider>
-          <Navbar />
+          <MemoryRouter>
+            <Navbar />
+          </MemoryRouter>
         </ThemeProvider>
-      </MemoryRouter>,
+      </AuthProvider>,
     );
 
     expect(container).toMatchSnapshot();
@@ -33,11 +36,13 @@ describe("Toggling theme", () => {
 
   it("defaults to light theme and writes to local storage and document data-theme", async () => {
     render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <Navbar />
-        </MemoryRouter>
-      </ThemeProvider>,
+      <AuthProvider>
+        <ThemeProvider>
+          <MemoryRouter>
+            <Navbar />
+          </MemoryRouter>
+        </ThemeProvider>
+      </AuthProvider>,
     );
 
     await waitFor(() => {
@@ -51,11 +56,13 @@ describe("Toggling theme", () => {
     localStorage.setItem("theme", "dark");
 
     render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <Navbar />
-        </MemoryRouter>
-      </ThemeProvider>,
+      <AuthProvider>
+        <ThemeProvider>
+          <MemoryRouter>
+            <Navbar />
+          </MemoryRouter>
+        </ThemeProvider>
+      </AuthProvider>,
     );
 
     await waitFor(() => {
@@ -71,11 +78,13 @@ describe("Toggling theme", () => {
     });
 
     render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <Navbar />
-        </MemoryRouter>
-      </ThemeProvider>,
+      <AuthProvider>
+        <ThemeProvider>
+          <MemoryRouter>
+            <Navbar />
+          </MemoryRouter>
+        </ThemeProvider>
+      </AuthProvider>,
     );
 
     await waitFor(() => {
@@ -86,11 +95,13 @@ describe("Toggling theme", () => {
   it("flipping theme, persists to localStorage, and updates <html>.className", async () => {
     const user = userEvent.setup();
     render(
-      <ThemeProvider>
-        <MemoryRouter>
-          <Navbar />
-        </MemoryRouter>
-      </ThemeProvider>,
+      <AuthProvider>
+        <ThemeProvider>
+          <MemoryRouter>
+            <Navbar />
+          </MemoryRouter>
+        </ThemeProvider>
+      </AuthProvider>,
     );
     const toggleThemeBtn = screen.getByRole("button", { name: "Toggle theme" });
 
