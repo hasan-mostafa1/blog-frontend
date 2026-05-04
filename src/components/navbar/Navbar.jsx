@@ -88,11 +88,17 @@ const Navbar = () => {
                     : styles.link
                 }
               >
-                <img
-                  className={styles.profileImage}
-                  src={authUser?.profileImage || defaultAvatarUrl}
-                  alt="Profile Image"
-                />
+                <div className={styles.profileImageFrame}>
+                  <img
+                    className={styles.profileImage}
+                    src={
+                      authUser?.profileImage
+                        ? `${import.meta.env.VITE_UPLOADS_URL}/profiles/${authUser?.profileImage}`
+                        : defaultAvatarUrl
+                    }
+                    alt="Profile Image"
+                  />
+                </div>
               </Link>
             </li>
           )}
