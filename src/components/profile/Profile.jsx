@@ -9,6 +9,7 @@ import useMyPosts from "../../hooks/useMyPosts";
 import { Link, useNavigate } from "react-router";
 import Input from "../input/Input";
 import { useForm, FormProvider } from "react-hook-form";
+import DOMPurify from "dompurify";
 
 const Profile = () => {
   const { authUser, updateAuthUser, token, updateToken } =
@@ -64,18 +65,6 @@ const Profile = () => {
     localStorage.removeItem("authUser");
     navigate("/");
   };
-  // const updateQuery = (updates) =>
-  //   setQuery((prev) => ({ ...prev, ...updates }));
-
-  // const changeSortOrder = () => {
-  //   setQuery((prev) => {
-  //     if (prev.sortOrder === "-") {
-  //       return { ...prev, sortOrder: "+" };
-  //     } else {
-  //       return { ...prev, sortOrder: "-" };
-  //     }
-  //   });
-  // };
 
   return (
     <>
@@ -113,7 +102,7 @@ const Profile = () => {
         <div className={styles.myPosts}>
           <div className={styles.header}>
             <h2>My posts</h2>
-            <Link to="#" className={styles.newPostLink}>
+            <Link to="/new-post" className={styles.newPostLink}>
               <span>+</span>New Post
             </Link>
           </div>
@@ -145,7 +134,11 @@ const Profile = () => {
                         </p>
                       </div>
                       <div className={styles.content}>
-                        <p>{post.content}</p>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: DOMPurify.sanitize(post.content),
+                          }}
+                        />
                       </div>
                     </div>
                   );

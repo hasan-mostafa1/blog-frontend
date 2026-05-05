@@ -1,0 +1,66 @@
+.section {
+    display:grid;
+    gap:25px;
+}
+
+.section h1 {
+    text-align: center;
+}
+
+.createPostForm {
+    display: grid;
+    grid-template-columns: min;
+    justify-items: start;
+    gap: 20px;
+}
+
+.tinymceEditor {
+    justify-self: stretch;
+}
+
+.createPostForm .formControl {
+    display: grid;
+    gap: 5px;
+}
+
+.createPostForm .formControl:last-child {
+    justify-self: stretch;
+}
+
+.label {
+    display: grid;
+}
+
+.error {
+    color: #bb1414;
+    border-radius: 10px;
+    margin-left: auto;
+    font-size: 13px;
+}
+
+.requiredAsterisk{
+    color: #bb1414;
+}
+ 
+.submitBtn {
+    padding: 5px;
+    margin-top: 20px;
+    border-color: var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.generalError {
+    margin: auto;
+    background-color: #bb141491;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px;
+}

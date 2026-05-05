@@ -6,6 +6,7 @@ import loadingIconUrl from "../../assets/icons/loading.svg";
 import errorIconUrl from "../../assets/icons/alert-rhombus.svg";
 import usePosts from "../../hooks/usePosts";
 import { format, parseISO } from "date-fns";
+import DOMPurify from "dompurify";
 
 const Posts = () => {
   const { posts, error, loading, query, setQuery } = usePosts();
@@ -89,7 +90,11 @@ const Posts = () => {
                     </p>
                   </div>
                   <div className={styles.content}>
-                    <p>{post.content}</p>
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(post.content),
+                      }}
+                    />
                   </div>
                 </div>
               );
