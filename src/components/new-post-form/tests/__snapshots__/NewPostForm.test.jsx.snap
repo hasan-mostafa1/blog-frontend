@@ -1,0 +1,114 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`New post form snapshot > Renders correctly 1`] = `
+<div>
+  <section
+    class="_section_13ba25"
+  >
+    <h1>
+      Create New Post
+    </h1>
+    <form
+      class="_createPostForm_13ba25"
+      novalidate=""
+    >
+      <div
+        class="_formControl_216ca8"
+      >
+        <label
+          class="_label_216ca8"
+          for="title"
+        >
+          <span>
+            Title
+            <span
+              class="_requiredAsterisk_216ca8"
+            >
+              *
+            </span>
+             
+          </span>
+          <input
+            class="_input_216ca8"
+            id="title"
+            name="title"
+            placeholder=""
+            type="text"
+          />
+        </label>
+      </div>
+      <div
+        class="_formControl_13ba25 _tinymceEditor_13ba25"
+      >
+        <label
+          class="_label_13ba25"
+          for="content"
+        >
+          <span>
+            Content
+            <span
+              class="_requiredAsterisk_13ba25"
+            >
+              *
+            </span>
+             
+          </span>
+          <textarea
+            id="tiny-react_57065333111778049115298"
+            style="visibility: hidden;"
+          />
+        </label>
+      </div>
+      <div
+        class="_formControl_216ca8"
+      >
+        <label
+          class="_label_216ca8"
+          for="bannerImage"
+        >
+          <span>
+            Banner Image
+             
+          </span>
+          <input
+            class="_input_216ca8"
+            id="bannerImage"
+            name="bannerImage"
+            placeholder=""
+            type="file"
+          />
+        </label>
+      </div>
+      <div
+        class="_formControl_216ca8"
+      >
+        <label
+          class="_label_216ca8"
+          for="published"
+        >
+          <span>
+            Publish
+             
+          </span>
+          <input
+            class="_input_216ca8"
+            id="published"
+            name="published"
+            placeholder=""
+            type="checkbox"
+          />
+        </label>
+      </div>
+      <div
+        class="_formControl_13ba25"
+      >
+        <button
+          class="_submitBtn_13ba25"
+        >
+          Create
+        </button>
+      </div>
+    </form>
+  </section>
+</div>
+`;

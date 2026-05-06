@@ -88,9 +88,9 @@ exports[`Posts component snapshot > Renders correctly 1`] = `
         <div
           class="_content_3c1de4"
         >
-          <p>
+          <div>
             test test
-          </p>
+          </div>
         </div>
       </div>
       <div
@@ -118,9 +118,9 @@ exports[`Posts component snapshot > Renders correctly 1`] = `
         <div
           class="_content_3c1de4"
         >
-          <p>
+          <div>
             test test
-          </p>
+          </div>
         </div>
       </div>
       <div
@@ -148,9 +148,9 @@ exports[`Posts component snapshot > Renders correctly 1`] = `
         <div
           class="_content_3c1de4"
         >
-          <p>
+          <div>
             test test
-          </p>
+          </div>
         </div>
       </div>
     </div>
