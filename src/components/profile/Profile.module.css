@@ -13,6 +13,7 @@
 }
 
 .profileImage {
+    justify-self: center;
     display: grid;
     gap: 10px;
 } 
@@ -287,4 +288,12 @@
 
 .hr {
     height: min-content;
+}
+
+@media (max-width:500px){
+    .info {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
 }
