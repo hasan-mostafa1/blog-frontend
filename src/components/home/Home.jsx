@@ -104,7 +104,11 @@ const Home = () => {
               latestPosts.data.map((post) => {
                 const createdAtDate = parseISO(post.createdAt);
                 return (
-                  <Link to="#" className={styles.link} key={post.id}>
+                  <Link
+                    to={`/posts/${post.id}`}
+                    className={styles.link}
+                    key={post.id}
+                  >
                     <div className={styles.blog}>
                       <p>{post.title}</p>
                       <p>{format(createdAtDate, "MMM d, yyyy")}</p>

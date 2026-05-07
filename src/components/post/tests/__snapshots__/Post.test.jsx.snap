@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Post component snapshot > Renders correctly 1`] = `
+<div>
+  <section
+    class="_section_67f347"
+  >
+    <div
+      class="_post_67f347"
+    >
+      <div
+        class="_title_67f347"
+      >
+        <h1>
+          First post
+        </h1>
+        <p>
+          by
+           
+          <span>
+            Leo
+             
+            Messi
+          </span>
+           
+          at 
+          Mar 25, 2026
+        </p>
+      </div>
+      <div
+        class="_content_67f347"
+      >
+        <div>
+          test test
+        </div>
+      </div>
+    </div>
+    <div
+      class="_likes_67f347"
+    >
+      <button>
+        <img
+          alt="Like button in the shape of a heart"
+          src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3e%3cpath%20d='M12,21.35L10.55,20.03C5.4,15.36%202,12.27%202,8.5C2,5.41%204.42,3%207.5,3C9.24,3%2010.91,3.81%2012,5.08C13.09,3.81%2014.76,3%2016.5,3C19.58,3%2022,5.41%2022,8.5C22,12.27%2018.6,15.36%2013.45,20.03L12,21.35Z'%20/%3e%3c/svg%3e"
+        />
+      </button>
+      <p>
+         Likes
+      </p>
+    </div>
+  </section>
+</div>
+`;

@@ -63,96 +63,114 @@ exports[`Profile component > Renders correctly 1`] = `
       <div
         class="_posts_6051a7"
       >
-        <div
-          class="_post_6051a7"
+        <a
+          class="_link_6051a7"
+          data-discover="true"
+          href="/posts/1"
         >
           <div
-            class="_title_6051a7"
+            class="_post_6051a7"
           >
-            <p>
-              First post
-            </p>
-            <p>
-              by
-               
-              <span>
-                Leo
+            <div
+              class="_title_6051a7"
+            >
+              <p>
+                First post
+              </p>
+              <p>
+                by
                  
-                Messi
-              </span>
-               
-              at 
-              Mar 25, 2026
-            </p>
-          </div>
-          <div
-            class="_content_6051a7"
-          >
-            <div>
-              test test
+                <span>
+                  Leo
+                   
+                  Messi
+                </span>
+                 
+                at 
+                Mar 25, 2026
+              </p>
+            </div>
+            <div
+              class="_content_6051a7"
+            >
+              <div>
+                test test
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="_post_6051a7"
+        </a>
+        <a
+          class="_link_6051a7"
+          data-discover="true"
+          href="/posts/6"
         >
           <div
-            class="_title_6051a7"
+            class="_post_6051a7"
           >
-            <p>
-              Second post
-            </p>
-            <p>
-              by
-               
-              <span>
-                Karim
+            <div
+              class="_title_6051a7"
+            >
+              <p>
+                Second post
+              </p>
+              <p>
+                by
                  
-                Benzema
-              </span>
-               
-              at 
-              Mar 25, 2026
-            </p>
-          </div>
-          <div
-            class="_content_6051a7"
-          >
-            <div>
-              test test
+                <span>
+                  Karim
+                   
+                  Benzema
+                </span>
+                 
+                at 
+                Mar 25, 2026
+              </p>
+            </div>
+            <div
+              class="_content_6051a7"
+            >
+              <div>
+                test test
+              </div>
             </div>
           </div>
-        </div>
-        <div
-          class="_post_6051a7"
+        </a>
+        <a
+          class="_link_6051a7"
+          data-discover="true"
+          href="/posts/9"
         >
           <div
-            class="_title_6051a7"
+            class="_post_6051a7"
           >
-            <p>
-              Third Post
-            </p>
-            <p>
-              by
-               
-              <span>
-                Vini
+            <div
+              class="_title_6051a7"
+            >
+              <p>
+                Third Post
+              </p>
+              <p>
+                by
                  
-                Junior
-              </span>
-               
-              at 
-              Mar 25, 2026
-            </p>
-          </div>
-          <div
-            class="_content_6051a7"
-          >
-            <div>
-              test test
+                <span>
+                  Vini
+                   
+                  Junior
+                </span>
+                 
+                at 
+                Mar 25, 2026
+              </p>
+            </div>
+            <div
+              class="_content_6051a7"
+            >
+              <div>
+                test test
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <div
         class="_pagination_6051a7"

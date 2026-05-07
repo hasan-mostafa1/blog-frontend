@@ -122,25 +122,31 @@ const Profile = () => {
                 {posts.data.map((post) => {
                   const createdAtDate = parseISO(post.createdAt);
                   return (
-                    <div className={styles.post} key={post.id}>
-                      <div className={styles.title}>
-                        <p>{post.title}</p>
-                        <p>
-                          by{" "}
-                          <span>
-                            {post.author.firstName} {post.author.lastName}
-                          </span>{" "}
-                          at {format(createdAtDate, "MMM d, yyyy")}
-                        </p>
+                    <Link
+                      to={`/posts/${post.id}`}
+                      key={post.id}
+                      className={styles.link}
+                    >
+                      <div className={styles.post}>
+                        <div className={styles.title}>
+                          <p>{post.title}</p>
+                          <p>
+                            by{" "}
+                            <span>
+                              {post.author.firstName} {post.author.lastName}
+                            </span>{" "}
+                            at {format(createdAtDate, "MMM d, yyyy")}
+                          </p>
+                        </div>
+                        <div className={styles.content}>
+                          <div
+                            dangerouslySetInnerHTML={{
+                              __html: DOMPurify.sanitize(post.content),
+                            }}
+                          />
+                        </div>
                       </div>
-                      <div className={styles.content}>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: DOMPurify.sanitize(post.content),
-                          }}
-                        />
-                      </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>

@@ -84,6 +84,10 @@
     gap: 30px;
 }
 
+.posts .link {
+    text-decoration: none;
+}
+
 .post {
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -92,6 +96,7 @@
     border: 1px solid var(--border-color);
     overflow: hidden;
     height:300px;
+    color: var(--text-color);
 }
 
 .post .title {
@@ -123,7 +128,7 @@
     transition: background-color .5s ease-in-out, color .5s ease-in-out;
 } 
 
-.post .content p {
+.post .content div {
     height: 100%;
     overflow: hidden;
     mask-image: linear-gradient(to bottom, black 60%, transparent 100%);

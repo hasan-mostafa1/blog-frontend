@@ -1,0 +1,110 @@
+.section {
+    display: grid;
+    grid-template-columns: 80%;
+    gap: 15px;
+    justify-content: center;
+}
+
+.bannerImage {
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bannerImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.post {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.post .title {
+    background-color: var(--post-title-background);
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    gap: 5px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.post .title p:last-child {
+    font-size: 13px;
+}
+
+.post .title span {
+    color: var(--secondary-color);
+}
+
+.post .content {
+    background-color: var(--post-body-background);
+    padding: 30px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+} 
+
+.loading {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.loading img {
+    width: 50px;
+    filter: var(--icon-filter);
+    animation: loading .5s linear  infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.networkError {
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+}
+
+.networkError img {
+    width: 50px;
+    filter: var(--icon-filter);
+}
+
+.likes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.likes button {
+    width: 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.likes img {
+    filter: var(--icon-filter);
+    width: 100%;
+}
+
+.likes img.liked { 
+    filter: invert(9%) sepia(62%) saturate(6164%) hue-rotate(9deg) brightness(95%) contrast(119%);
+}
