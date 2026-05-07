@@ -33,7 +33,7 @@ const useMyPosts = () => {
       })
       .catch((error) => setError(error))
       .finally(() => setLoading(false));
-  }, [query]);
+  }, [query, token]);
 
   return { posts, error, loading, query, setQuery };
 };

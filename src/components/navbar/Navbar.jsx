@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import ThemeContext from "../../contexts/ThemeContext";
 import AuthContext from "../../contexts/AuthContext";
 import defaultAvatarUrl from "../../assets/icons/default-avatar.svg";
+import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
 
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -49,10 +50,20 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/about"
+            <HashLink
+              smooth
+              to="/#about"
+              className={styles.link}
+              onClick={() => {
+                isMenuOpen && toggleMenu();
+              }}
+            >
+              about
+            </HashLink>
+            {/* <a
+              href="/#about"
               className={
-                location.pathname === "/about"
+                location.hash === "#about"
                   ? `${styles.link} ${styles.active}`
                   : styles.link
               }
@@ -61,7 +72,7 @@ const Navbar = () => {
               }}
             >
               about
-            </Link>
+            </a> */}
           </li>
           <li>
             <Link
