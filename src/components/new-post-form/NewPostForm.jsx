@@ -150,14 +150,14 @@ const NewPostForm = () => {
             validation={{
               validate: {
                 lessThan2MB: (files) => {
-                  if (files[0] && files[0].size < 2 * 1024 * 1024) {
+                  if (files[0] && files[0].size > 2 * 1024 * 1024) {
                     return "File is too large (max 2MB)";
                   }
                 },
                 allowedFormats: (files) => {
                   if (
                     files[0] &&
-                    ["image/jpeg", "image/png", "image/gif"].includes(
+                    !["image/jpeg", "image/png", "image/gif"].includes(
                       files[0].type,
                     )
                   ) {

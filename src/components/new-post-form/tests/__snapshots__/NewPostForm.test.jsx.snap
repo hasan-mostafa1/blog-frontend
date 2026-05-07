@@ -54,7 +54,7 @@ exports[`New post form snapshot > Renders correctly 1`] = `
              
           </span>
           <textarea
-            id="tiny-react_57065333111778049115298"
+            id="tiny-react_99497844911778139197617"
             style="visibility: hidden;"
           />
         </label>
