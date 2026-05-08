@@ -68,10 +68,6 @@
     color: var(--secondary-color);
 }
 
-/* .navigationList .link:hover img{
-    filter: var(--icon-filter-secondary-color);
-} */
-
 .link.active {
     color: var(--secondary-color);
 }
@@ -98,6 +94,25 @@
 
 .menuBtn {
     display: none;
+    filter: var(--icon-filter);
+}
+
+.profileImageFrame {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  overflow: hidden;
+} 
+
+.profileImageFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profileImageFrame + span {
+    display: none;
+    color: var(--text-color);
 }
 
 @media (max-width:760px) {
@@ -135,22 +150,7 @@
         justify-content: flex-start;
     }
 
-    .navigationList li:last-child .link:after{
-        content: "Profile";
-        color: var(--text-color);
+    .profileImageFrame + span {
         display: inline;
     }
-}
-
-.profileImageFrame {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  overflow: hidden;
-} 
-
-.profileImageFrame img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }

@@ -60,19 +60,6 @@ const Navbar = () => {
             >
               about
             </HashLink>
-            {/* <a
-              href="/#about"
-              className={
-                location.hash === "#about"
-                  ? `${styles.link} ${styles.active}`
-                  : styles.link
-              }
-              onClick={() => {
-                isMenuOpen && toggleMenu();
-              }}
-            >
-              about
-            </a> */}
           </li>
           <li>
             <Link
@@ -110,6 +97,7 @@ const Navbar = () => {
                     alt="Profile Image"
                   />
                 </div>
+                <span>Profile</span>
               </Link>
             </li>
           )}
