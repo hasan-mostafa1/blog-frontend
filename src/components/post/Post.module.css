@@ -1,6 +1,6 @@
 .section {
     display: grid;
-    grid-template-columns: 80%;
+    grid-template-columns: 80vw;
     gap: 15px;
     justify-content: center;
 }
@@ -47,9 +47,11 @@
     background-color: var(--post-body-background);
     padding: 30px;
     transition: background-color .5s ease-in-out, color .5s ease-in-out;
+    overflow-wrap: break-word;
+    text-wrap: pretty;
 }
 
-.post .content pre {
+.post .content pre  {
     background-color: var(--post-title-background);
     border-radius: 5px;
     padding: 10px;
