@@ -19,6 +19,7 @@
 
 .post {
     display: grid;
+    grid-template-columns: 100%;
     grid-template-rows: min-content 1fr;
     border-radius: 10px;
     border: 1px solid var(--border-color);
@@ -35,7 +36,7 @@
 }
 
 .post .title p:last-child {
-    font-size: 13px;
+    font-size: 1rem;
 }
 
 .post .title span {
@@ -46,7 +47,14 @@
     background-color: var(--post-body-background);
     padding: 30px;
     transition: background-color .5s ease-in-out, color .5s ease-in-out;
-} 
+}
+
+.post .content pre {
+    background-color: var(--post-title-background);
+    border-radius: 5px;
+    padding: 10px;
+    overflow-x:auto
+}
 
 .loading {
     align-self: center;
